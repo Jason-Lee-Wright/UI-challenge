@@ -13,7 +13,7 @@ public class UiManager : MonoBehaviour
 
     private Button Button;
 
-    private void UpdateText()
+    private void UpdateScore()
     {
         ScoreText.text = $"Score: {ScoreCount:N0}";
     }
@@ -26,7 +26,7 @@ public class UiManager : MonoBehaviour
         {
             ScoreCount = 999999999;
         }
-            UpdateText();
+            UpdateScore();
     }
 
     public void Decrease()
@@ -40,13 +40,13 @@ public class UiManager : MonoBehaviour
         {
             ScoreCount = 0;
         }
-        UpdateText();
+        UpdateScore();
     }
 
     public void Reset()
     {
         EventSystem.current.SetSelectedGameObject(null);
         ScoreCount = 0;
-        UpdateText();
+        UpdateScore();
     }
 }
