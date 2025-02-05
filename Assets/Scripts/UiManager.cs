@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class UiManager : MonoBehaviour
 {
-    private int ScoreCount = 999999999;
+    private int ScoreCount;
 
     public TextMeshProUGUI ScoreText;
 
