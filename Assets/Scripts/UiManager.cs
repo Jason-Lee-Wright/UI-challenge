@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class UiManager : MonoBehaviour
 {
-    private int ScoreCount;
+    private int ScoreCount = 999999999;
 
     public TextMeshProUGUI ScoreText;
 
@@ -21,14 +21,25 @@ public class UiManager : MonoBehaviour
     public void Increase()
     {
         EventSystem.current.SetSelectedGameObject(null);
-        ScoreCount += 15;
-        UpdateText();
+            ScoreCount += 15;
+        if (ScoreCount >= 1000000000)
+        {
+            ScoreCount = 999999999;
+        }
+            UpdateText();
     }
 
     public void Decrease()
     {
         EventSystem.current.SetSelectedGameObject(null);
-        ScoreCount -= 15;
+        if (ScoreCount > 0)
+        {
+            ScoreCount -= 15;
+        }
+        if (ScoreCount < 0)
+        {
+            ScoreCount = 0;
+        }
         UpdateText();
     }
 
