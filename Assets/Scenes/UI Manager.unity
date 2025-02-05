@@ -1127,7 +1127,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1385935192}
         m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: Reset
+        m_MethodName: ResetScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 1385935193}
   - component: {fileID: 1385935192}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: UI Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
