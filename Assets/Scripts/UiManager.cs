@@ -43,7 +43,7 @@ public class UiManager : MonoBehaviour
         UpdateScore();
     }
 
-    public void Reset()
+    public void ResetScore()
     {
         EventSystem.current.SetSelectedGameObject(null);
         ScoreCount = 0;
